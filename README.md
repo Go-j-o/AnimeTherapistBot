@@ -82,6 +82,25 @@ To modify or add new characters:
 2. Add corresponding character portraits in the `frontend` directory
 3. Update the frontend interface in `frontend/index.html` and `frontend/script.js`
 
+## Deployment
+
+This project is deployed on Render. To deploy your own version:
+
+1. Fork this repository
+2. Sign up for a free Render account at [render.com](https://render.com)
+3. Create a new Web Service and connect your repository
+4. Configure the deployment with these settings:
+   ```
+   Name: your-preferred-name
+   Environment: Python
+   Build Command: pip install -r requirements.txt
+   Start Command: gunicorn main:app
+   ```
+5. Add these environment variables in Render:
+   ```
+   TOGETHER_API_KEY: your_together_ai_api_key
+   FLASK_ENV: production
+   ```
 
 ## Contributing
 
@@ -91,8 +110,8 @@ To modify or add new characters:
 4. Push to the branch
 5. Create a Pull Request
 
-
 ## Acknowledgments
 
 - Together AI for providing the language model
 - Flask for the web framework
+- Render for hosting the application
