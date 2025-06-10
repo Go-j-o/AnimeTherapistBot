@@ -2,6 +2,8 @@
 
 A web application that provides therapeutic conversations with AI-powered anime characters. The bot uses Together AI's language model to generate responses in the style of different anime personalities.
 
+🌐 **Live Demo**: [Anime Therapist Bot](https://animetherapistbot-1.onrender.com)
+
 ## Features
 
 - Multiple anime character personalities to chat with
