@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anime Therapist Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="main-header">
+    <h1 class="anime-title">Choose Your Anime Themed Therapist</h1>
+    <button id="mode-toggle" class="mode-toggle" onclick="toggleMode()">🌙</button>
+  </div>
+  <div id="character-select" class="character-row">
+    <!-- Character cards will be injected by JS -->
+  </div>
+  <div id="chat-section" style="display:none; max-width:900px; margin:40px auto 0 auto;">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <div id="chat-header" style="display:flex;align-items:center;gap:24px;margin-bottom:16px;">
+      <div id="chat-avatar" class="chibi-avatar" style="font-size:3.5rem;"></div>
+      <div>
+        <div id="chat-name" class="character-name"></div>
+        <div id="chat-role" class="character-desc"></div>
+      </div>
+    </div>
+    <div id="chat-box" style="min-height:320px;max-height:400px;overflow-y:auto;background:rgba(255,255,255,0.7);border-radius:18px;padding:18px 12px 12px 12px;margin-bottom:18px;box-shadow:0 2px 12px #b5f0ff33;"></div>
+    <form id="chat-form" style="display:flex;gap:12px;" onsubmit="return false;">
+      <input id="user-input" type="text" placeholder="Type your message..." autocomplete="off" style="flex:1;font-size:1.1rem;padding:12px 16px;border-radius:12px;border:2px solid #b5f0ff;outline:none;" />
+      <button id="send-btn" type="submit" class="summon-btn" style="margin:0;">Send</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
